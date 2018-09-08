@@ -87,11 +87,16 @@ export default {
   <Layout>
     <h1>Home Page</h1>
     <img src="@assets/images/logo.png" alt="Logo">
-    <button @click="jsToNavtiveSync()">js调用native，同步调用</button>
+    <button :class="$style.btn" @click="jsToNavtiveSync()">js调用native，同步调用</button>
     <button @click="jsToNavtiveAsync()">js调用native,异步调用，无参</button>
     <button @click="jsToNavtiveAsyncParmas()">js调用native,异步调用，有参</button>
   </Layout>
 </template>
 <style lang="scss" module>
 @import '@design';
+.btn {
+    width: 300px;
+    height: 100px;
+    background: red;
+}
 </style>
